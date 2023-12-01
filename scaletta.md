@@ -89,4 +89,13 @@ git checkout Nome_Branch
 
 ## Effettuare il Merge
 
-- Fabio branch test
+- Prima di effettuare il push, committare la branch, pullare dal main e mergiare la main nel branch
+
+```bash
+git add .
+git commit -m"messaggio di commit"
+git checkout main (Torno nel main)
+git pull (Mi sincronizzo con gli aggiornamenti del main)
+git checkout nome_branch (Torno nella branch)
+git merge main (Sincronizzo la mia Branch con il main)
+```
