@@ -91,11 +91,69 @@ git checkout Nome_Branch
 
 - Prima di effettuare il push, committare la branch, pullare dal main e mergiare la main nel branch
 
+### Dalla Branch
+
 ```bash
+
 git add .
-git commit -m"messaggio di commit"
+
+git commit -m"messaggio di commit" (commit della branch)
+
 git checkout main (Torno nel main)
+
 git pull (Mi sincronizzo con gli aggiornamenti del main)
+
 git checkout nome_branch (Torno nella branch)
+
 git merge main (Sincronizzo la mia Branch con il main)
+
+git push (Pusho dalla branch il commit fatto prima)
+
 ```
+
+## Se il lavoro sulla branch è completo procedo su github e chiudo la pull request e chiudo la branch
+
+# DOPO LA CHIUSURA DEL LAVORO SU UNA BRANCH IMPORTANTE APRIRNE UN ALTRA E NON UTILIZZARE QUELLA USATA PRIMA O IL MAIN 
+
+
+# ALLA FINE DEL PROGETTO
+
+Oppure un altro metodo che potete utilizzare e aggiungere una repository upstream al vostro codice.
+Cambia che in questo modo non eliminate la cartella .git e quindi non perdete i vostri commit e la connessione con la repository master (origin) e potete cosi continuare a fare pull in caso di necessita e push dei vostri branch anche al master.
+1 - Per farlo aggiungiamo la repository creata previamente su Github
+
+```bash
+
+git remote add upstream http://mio_url_di_github.git
+
+```
+
+2 - Verifichiamo che si e' aggiunto correttamente
+
+```bash
+
+git remote -v
+
+```
+
+Vedremo ciò più o meno:
+
+```bash
+
+origin https://github.com/boolean-it/ex-laravel9-boolfolio-backend.git (fetch)
+origin https://github.com/boolean-it/ex-laravel9-boolfolio-backend.git (push)
+upstream https://github.com/arturmamedov/withFront (fetch)
+upstream https://github.com/arturmamedov/withFront (push)
+
+```
+
+E quindi una di origin e una di upstream (la nostra personale)
+3 -  Da interfaccia di VSCode Git push to ... oppure con il comando pushiamo i nostri commit e branch alla upstream:
+
+```bash
+
+git push upstream main
+
+```
+
+Attenzione main e' il nome del branch (noi ci aspettiamo che alla fine del lavoro tutti i vostri branch e quindi modifiche siano mergiati dentro il branch main o master e non nei vostri branch individuali, claro?)
