@@ -88,3 +88,5 @@ git checkout Nome_Branch
 ### AVVISARE IL TEAM, I PUSH VANNO VERIFICATI SU GITHUB DA UN ALTRO MEMBRO
 
 ## Effettuare il Merge
+
+- Fabio branch test
