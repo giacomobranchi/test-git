@@ -85,4 +85,4 @@ git checkout Nome_Branch
 
 - Lanciare il comando nel messaggio di errore
 
-
+### AVVISARE IL TEAM, I PUSH VANNO VERIFICATI SU GITHUB DA UN ALTRO MEMBRO
